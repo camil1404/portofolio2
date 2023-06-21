@@ -1,0 +1,241 @@
+/*https://coolors.co/palette/000814-001d3d-003566-ffc300-ffd60a*/
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  display: flex;
+}
+h2 {
+  color: #fff724;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: #003566;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container h1 {
+  font-size: 7rem;
+}
+span {
+  color: #fff724;
+}
+
+/* nav menu */
+.navbar {
+  position: absolute;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  box-sizing: border-box;
+  align-items: center;
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar .logo {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.navbar .nav-links ul {
+  display: flex;
+}
+
+.navbar .nav-links ul li {
+  margin: 0 25px;
+}
+
+.navbar .nav-links ul li.active a {
+  color: #fff724;
+  font-weight: 600;
+}
+/* scroll*/
+
+.containerscroll {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 50%;
+  top: 85%;
+}
+
+.chevron {
+  position: absolute;
+  width: 40px;
+  height: 8px;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 51%;
+  background: #fff;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+  }
+}
+
+.textscroll {
+  display: block;
+  margin-top: 75px;
+  margin-left: -30px;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  white-space: nowrap;
+  opacity: 0.25;
+  animation: pulse 2s linear alternate infinite;
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
+}
+
+.landing {
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-image: linear-gradient(#003566, black);
+  display: flex;
+}
+/* profiel pic*/
+.profilepic {
+  position: absolute;
+  width: 20%;
+  right: 10%;
+  top: 20%;
+  --b: 5px; /* border thickness */
+  --c: #0000 25%, #fff724 0; /* define the color here */
+  padding: 10px;
+  background: conic-gradient(from 90deg at top var(--b) left var(--b), var(--c))
+      0 0,
+    conic-gradient(from 180deg at top var(--b) right var(--b), var(--c)) 100% 0,
+    conic-gradient(from 0deg at bottom var(--b) left var(--b), var(--c)) 0 100%,
+    conic-gradient(from -90deg at bottom var(--b) right var(--b), var(--c)) 100%
+      100%;
+  background-size: 50px 50px; /* adjust border length here */
+  background-repeat: no-repeat;
+  transition: 0.6s;
+  cursor: pointer;
+}
+
+.profilepic:hover {
+  background-size: 51% 51%;
+}
+
+.aboutmetext {
+  text-align: center;
+  width: 45%;
+  color: #fff;
+  margin-top: 10%;
+  margin-left: 10%;
+}
+h3 {
+  font-size: 2.5em;
+  margin-bottom: 5%;
+}
+p {
+  font-size: 1.2em;
+  color: #fff;
+  position: relative;
+}
+
+.secondpart {
+  top: 200%;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  background-color: black;
+}
+.educatie {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  display: flex;
+}
+.brein {
+  width: 25%;
+  margin-left: 10%;
+  height: 70%;
+}
+.textschool {
+  width: 45%;
+  color: #fff;
+  text-align: center;
+  margin-left: 10%;
+}
+.diploma {
+  position: absolute;
+  width: 20%;
+  right: 10%;
+}
+.diplomas {
+  margin-top: 26%;
+  width: 100%;
+  height: 50%;
+  position: absolute;
+  display: flex;
+  background-color: black;
+}
